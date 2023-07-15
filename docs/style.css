@@ -15,9 +15,13 @@ body {
   background-color:hsl(48, 50%, 88%);
   animation: fadeIn 0.5s ease-in;
 }
+.center {
+  text-align: center;
+}
+
 
 #searchForm {
-    width: 1000px; /* Set the desired width */
+    width: 100%; /* Set the desired width */
     margin: 3; /* Center the form horizontally */
   }
 
