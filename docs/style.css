@@ -844,3 +844,7 @@ button[type="button"]:hover {
   padding-top: 10px;
   margin-top: 10px;
 }
+.creator-pictures .circle:nth-child(2) img {
+  object-fit: cover;
+  object-position: 60% 5%;
+}
