@@ -36,41 +36,42 @@
 
   <main>
     <section id="home" class="tab-content active">
-      <div class="hero">
       <h2>Welcome to Network Green!</h2>
 
       <div style="display: flex; justify-content: space-between;">
-  <img src="https://c4.wallpaperflare.com/wallpaper/878/756/892/austin-texas-twilight-skyscrapers-wallpaper-preview.jpg" style="width: 49%; height: auto;">
-  <div style="width: 2%;"></div> <!-- This div creates the space between the images -->
-  <img src="https://res.cloudinary.com/simpleview/image/upload/v1648755098/clients/austin/Austin_Skyline_Credit_Christopher_Sherman_lifetime__4f60343d-9f69-450c-8ad3-fa636761786d.jpg" style="width: 49%; height: auto;">
-</div>
-
-
+        <img src="https://c4.wallpaperflare.com/wallpaper/878/756/892/austin-texas-twilight-skyscrapers-wallpaper-preview.jpg" style="width: 50%; height: auto;">
+          <!--<div style="width: 2%;"></div>--> <!-- This div creates the space between the images -->
+        <img src="https://res.cloudinary.com/simpleview/image/upload/v1648755098/clients/austin/Austin_Skyline_Credit_Christopher_Sherman_lifetime__4f60343d-9f69-450c-8ad3-fa636761786d.jpg" style="width: 50%; height: auto;">
       </div>
+      <br>
       <div class="container">
-        <h3 style="color: black;">How It Works</h3>
-        <p style="color: black;">Our platform connects restaurants that have surplus food with food pantries and
+        <h3 class="center">How It Works</h3>
+        <p>Our platform connects restaurants that have surplus food with food pantries and
           homeless shelters in need. We provide a seamless way for restaurants to donate their excess food, ensuring
           that it reaches those who need it the most.</p>
-        <h3 style="color: black;">Why Donate</h3>
-        <p style="color: black;">By donating food, restaurants not only contribute to reducing food waste but also make
+        <h3 class="center">Why Donate</h3>
+        <p>By donating food, restaurants not only contribute to reducing food waste but also make
           a positive impact on the lives of individuals facing food insecurity. Join us in making Austin a more
           sustainable and compassionate community.</p>
-        <h3 style="color: black;">Get Involved</h3>
-        <p style="color: black;">Whether you're a restaurant owner, a food pantry representative, or an individual
+        <h3 class="center">Get Involved</h3>
+        <p>Whether you're a restaurant owner, a food pantry representative, or an individual
           passionate about our cause, there are many ways to get involved. Contact us to learn more about volunteer
           opportunities, partnerships, and donations.</p>
-      </div>
-    </div>
-    <h3 style="color: rgba(34, 20, 185, 0.564);">“I have the audacity to believe that peoples everywhere can have three meals a day for their bodies, education and culture of their minds, and dignity, equality, and freedom for their spirits."</h3>
-    <h3 style="text-align:center;color:rgba(34, 20, 185, 0.564);">- Martin Luther King</h3>
+        </div>
+        <br>
+          <div class="quote-container">
+            <h3>“I have the audacity to believe that peoples everywhere can have <span style="color:white; text-shadow: 0.5px 0.5px 0px black;">three meals a day</span> for their bodies, education and culture of their minds, and dignity, equality, and freedom for their spirits."</h3>
+            <h3 class="center"><span style="font-weight:700;">- Martin Luther King</span></h3>
+          </div>
+          
+
     </section>
     <section id="about" class="tab-content">
-      <h2 style="text-align:center;color:rgb(36, 245, 179);font-size: 60px;" class="about-heading">About Network Green</h2>
+      <h2 class="about-heading">About Network Green</h2>
       <div class="flex-container">
-        <p class="about-content" style="font-size:50px; text-align:center">Our mission is to build a network that connects the world through charity and support.</p>
-        <p class="about-content"style= text-align:center>Through our work, we hope to connect restaurants and food shelters to promote the food security problem inside of the US and eradicate hunger.</p>
-        <p class="about-content"style= text-align:center>Let's join hands and make a difference in the world. Together, we can create a better future for generations to come.</p>        
+        <p class="about-content white" style="font-size:50px; text-align:center">Our mission is to build a network that connects the world through charity and support.</p>
+        <p class="about-content white"style= text-align:center>Through our work, we hope to connect restaurants and food shelters to promote the food security problem inside of the US and eradicate hunger.</p>
+        <p class="about-content white"style= text-align:center>Let's join hands and make a difference in the world. Together, we can create a better future for generations to come.</p>        
       </div>
     </section>
 
@@ -100,7 +101,7 @@
     
     <section id="contact" class="tab-content">
     <h2>Contact Us</h2>
-    <div class="container">
+    <div class="container contactUs">
       <p>For any inquiries or feedback, please contact us at:</p>
       <p>Email: networkgreenatx@gmail.com</p>
       <p>Instagram: @networkgreenatx</p>
@@ -123,10 +124,9 @@
         document.getElementById("thankYouMessage").classList.remove("hidden");
       }
     </script>
-  </head>
-  <body>
+    <br>
     <div class="container" id="feedbackForm">
-      <h3>Feedback Form</h3>
+      <h3 class="center">Feedback Form</h3>
       <form>
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -148,79 +148,12 @@
     </div>
 
     <style>
-      .container {
-        max-width: 900px; /* Increase the maximum width */
-        margin: 0 auto;
-        padding: 50px; /* Increase the padding */
-        background-color: #f5f5f5;
-        border-radius: 5px;
-      }
       
-      h2 {
-        color: #333;
-        font-size: 32px; /* Increase the font size */
-        margin-bottom: 25px; /* Increase the margin bottom */
-      }
-      
-      p {
-        color: #555;
-        font-size: 20px; /* Increase the font size */
-        line-height: 1.6;
-        margin-bottom: 15px; /* Increase the margin bottom */
-      }
-      
-      form {
-        margin-top: 35px; /* Increase the margin top */
-      }
-      
-      label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 15px; /* Increase the margin bottom */
-        font-size: 18px; /* Increase the font size */
-      }
-      
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        width: 100%;
-        padding: 15px; /* Increase the padding */
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 18px; /* Increase the font size */
-        margin-bottom: 20px; /* Increase the margin bottom */
-      }
-      
-      button[type="submit"],
-      button[type="button"] {
-        padding: 15px 25px; /* Increase the padding */
-        background-color: #4caf50;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 18px; /* Increase the font size */
-        cursor: pointer;
-        margin-top: 20px; /* Increase the margin top */
-      }
-      
-      button[type="submit"]:hover,
-      button[type="button"]:hover {
-        background-color: #45a049;
-      }
-      
-      .hidden {
-        display: none;
-      }
     </style>
     
     
     
-    </section> 
-  
-<html>
-
-
-</html>
+    </section>
   
 
    <section id="donate" class="tab-content">
@@ -389,57 +322,14 @@
     </section>
 
   </main>
-  <footer>  
-    <html>
-    <head>
-      <style>
-        .footer {
-          /*background-color: white;*/
-          padding-bottom: 5px;
-          padding-top: 0px;
-          text-align: center;
-          /*border: 1px solid black;*/
-          color: white;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto auto;
-          gap: 10px;
-          align-items: center;
-          justify-items: center;
-          margin-top: 0;
-        }
-    
-        .footer .contact-info {
-          grid-column: 2 / 3;
-          
-        }
-    
-        .footer .made-by {
-          grid-column: 1 / 2;
-          
-          text-align: left, center;
-          
-        }
-    
-        .footer .rights {
-          grid-column: 1 / -1;
-          justify-self: center;
-        }
-      </style>
-    </head>
-    <body>
       <footer class="footer">
         <div class="made-by">
           <h4>Website Creators</h4>
-          <p class="white">Zaeem Alam, Parth Sangani, Saachi Agrawal, and Devin Thenuwara</p>
-          <p class="white">Mentored by: Wei San Hui</p>
+          <p class="white">Zaeem Alam, Parth Sangani, Saachi Agrawal, and Devin Thenuwara <br> Mentored by: Wei San Hui </p>
         </div>
         <div class="contact-info">
           <h4>Contact Information</h4>
-          <p class="white">Email: networkgreenatx@gmail.com</p>
-          <p class="white">Instagram: @networkgreenatx</p>
-          <p class="white">Address: 1124 S I-35 Frontage Rd</p>
-           <p class="white">#300, Austin, TX 78704</p>
+          <p class="white">Email: networkgreenatx@gmail.com <br> Instagram: @networkgreenatx <br> Address: 1124 S I-35 Frontage Rd <br> #300, Austin, TX 78704 </p>
         </div>
         <div class="rights">
           &copy; 2023 Network Green. All rights reserved.
