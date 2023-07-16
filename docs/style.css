@@ -844,7 +844,56 @@ button[type="button"]:hover {
   padding-top: 10px;
   margin-top: 10px;
 }
-.creator-pictures .circle:nth-child(2) img {
+
+.creator-pictures .circle:nth-child(1) img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   object-fit: cover;
-  object-position: 60% 5%;
+  margin-bottom: 10px;
+  transform: scale(1.2); /* Adjust the scale value to match the zoom level */
+  transition: transform 0.2s ease-in-out; /* Add a transition for smooth zooming effect */
+}
+.creator-pictures .circle:nth-child(2) img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transform: scale(1.2); /* Adjust the scale value to match the zoom level */
+  transition: transform 0.2s ease-in-out; /* Add a transition for smooth zooming effect */
+}
+.creator-pictures .circle:nth-child(3) img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transform: scale(1.2); /* Adjust the scale value to match the zoom level */
+  transition: transform 0.2s ease-in-out; /* Add a transition for smooth zooming effect */
+}
+.creator-pictures .circle:nth-child(4) img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transform: scale(1.2); /* Adjust the scale value to match the zoom level */
+  transition: transform 0.2s ease-in-out; /* Add a transition for smooth zooming effect */
+}
+
+.creator-pictures .circle:nth-child(1) img:hover {
+  transform: scale(1); /* Reset the scale on hover to the original size */
+}
+
+.creator-pictures .circle:nth-child(2) img:hover {
+  transform: scale(1); /* Reset the scale on hover to the original size */
+}
+
+.creator-pictures .circle:nth-child(3) img:hover {
+  transform: scale(1); /* Reset the scale on hover to the original size */
+}
+
+.creator-pictures .circle:nth-child(4) img:hover {
+  transform: scale(1); /* Reset the scale on hover to the original size */
 }
