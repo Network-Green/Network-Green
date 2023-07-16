@@ -15,6 +15,7 @@ body {
   background-color:hsl(48, 50%, 88%);
   animation: fadeIn 0.5s ease-in;
 }
+
 .center {
   text-align: center;
 }
@@ -27,7 +28,7 @@ body {
 
 /* Header Styles */
 header {
-  font-family: 'Times New Roman', Times, serif;
+  /*font-family: 'Times New Roman', Times, serif;*/
   background: linear-gradient(to right, #047329, #03a74a);
   padding: 20px;
   text-align: center;
@@ -65,15 +66,18 @@ h1 {
 
 h2 {
   font-family: 'Titillium Web', sans-serif;
-  color: black;
   text-align: center;
   font-weight: 700;
   display: block;
-  height: 200;
-  font-size: 60px;
-  margin-bottom: 60px;
+  height: 240;
+  font-size: 60px !important;
+  margin-bottom: 30px;
+  margin-top: 10px;
   letter-spacing: 0.5px;
   word-spacing: 4px;
+  background-color: hsla(0, 0%, 95%, 0.9);
+  color: #049a37 !important;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Styles */
@@ -105,7 +109,7 @@ nav ul li a {
   padding: 5px 10px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
 }
 
@@ -199,7 +203,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.request-button {
+/*.request-button {
   background-color: #ffc107;
   color: #000;
   border: none;
@@ -210,10 +214,10 @@ footer {
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: scaleIn 0.5s ease-in-out;
-}
+} */
 
 .loginbtn {
-  background-color: #036d26;
+  background-color: #047329;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -227,7 +231,7 @@ footer {
 }
 
 .loginbtn:hover {
-  opacity: 0.8;
+  background-color:#03a74a;
 }
 
  input[type=password] {
@@ -287,7 +291,7 @@ input[type=text][name=restaurantName] {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-heading {
+/* .about-heading {
   color: white;
   font-size: 36px;
   margin-bottom: 30px;
@@ -297,7 +301,7 @@ input[type=text][name=restaurantName] {
   color: white;
   font-size: 18px;
   line-height: 1.6;
-}
+} */
 
 input[type=text][name=usernamereg] {
   padding: 12px 20px;
@@ -440,7 +444,7 @@ nav ul li a:hover:after {
 }
 
 .request-button:hover {
-  background-color: #45a049; /* Darker green background on hover */
+  background-color: #047329; /* Darker green background on hover */
 }
 
 .request-details {
@@ -596,18 +600,38 @@ ul#requestsList {
 }
 
 .container {
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  background-color: #f2f2f2;
+  max-width: 900px; /* Increase the maximum width */
+  margin: 0 auto;
+  padding: 50px; /* Increase the padding */
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 1px solid rgb(0,0,0,0.2);
 }
 
 .container2 {
   padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   background-color: #f9f9f9;
 }
+
+.quote-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #0094e37f;
+  border-radius: 0px;
+  border: 0;
+  box-shadow: 10px 10px 1px #0094e3, 20px 20px 1px #0777b3;
+  margin-bottom: 30px;
+}
+
+.quote-container h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+}
+
+/*rgba(34, 20, 185, 0.564)*/
 
 input[type=text], input[type=email] {
   width: 95%;
@@ -629,7 +653,7 @@ label {
 }
 
 .btn {
-  background-color: #04AA6D;
+  background-color: #047329;
   color: white;
   padding: 12px;
   margin: 10px 0;
@@ -641,7 +665,7 @@ label {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #03a74a;
 }
 
 span.price {
@@ -674,4 +698,116 @@ span.price {
 
 .white {
   color:white;
+}
+
+.footer {
+  /*background-color: white;*/
+  padding-bottom: 5px;
+  padding-top: 0px;
+  text-align: center;
+  /*border: 1px solid black;*/
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 0;
+}
+
+.footer h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footer p{
+  font-size: 16px;
+}
+
+.footer .contact-info {
+  grid-column: 2 / 3;
+  
+}
+
+.footer .made-by {
+  grid-column: 1 / 2; 
+  text-align: left, center;
+  
+}
+
+.footer .rights {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.contactUs p {
+  color: #000;
+  font-size: 20px; /* Increase the font size */
+  line-height: 1.6;
+  margin-bottom: 15px; /* Increase the margin bottom */
+}
+
+form {
+  margin-top: 35px; /* Increase the margin top */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px; /* Increase the margin bottom */
+  font-size: 18px; /* Increase the font size */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 15px; /* Increase the padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px; /* Increase the font size */
+  margin-bottom: 20px; /* Increase the margin bottom */
+}
+
+button[type="submit"],
+button[type="button"] {
+  padding: 15px 25px; /* Increase the padding */
+  background-color: #047329;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px; /* Increase the font size */
+  cursor: pointer;
+  margin-top: 20px; /* Increase the margin top */
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #049a37;
+}
+
+.hidden {
+  display: none;
+}
+
+.creator-pictures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
