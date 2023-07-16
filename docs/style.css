@@ -849,7 +849,6 @@ button[type="button"]:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 10px;
   transform: scale(1.2); 
   transition: transform 0.2s ease-in-out; 
@@ -884,17 +883,17 @@ button[type="button"]:hover {
 }
 
 .creator-pictures .circle:nth-child(1) img:hover {
-  transform: scale(1); 
+  transform: scale(1.5); 
 }
 
 .creator-pictures .circle:nth-child(2) img:hover {
-  transform: scale(1); 
+  transform: scale(1.5); 
 }
 
 .creator-pictures .circle:nth-child(3) img:hover {
-  transform: scale(1); 
+  transform: scale(1.5); 
 }
 
 .creator-pictures .circle:nth-child(4) img:hover {
-  transform: scale(1);
+  transform: scale(1.5);
 }
