@@ -287,11 +287,11 @@ input[type=text][name=restaurantName] {
 
 
 .flex-container {
-  /* background-image: url("vintage-old-rustic-cutlery-dark.jpg"); */
+  background-image: url("vintage-old-rustic-cutlery-dark.jpg");
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  max-width: 1000px;
+  max-width: auto;
   max-height: auto;
   margin: 0 auto;
   padding: 50px;
@@ -1022,18 +1022,25 @@ margin-right: 20px;
 
 /* Quote container */
 .quote2-container {
-  max-width: 1000px;
+  max-width: auto;
   margin: 0 auto;
   margin-top:-20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+<<<<<<< Updated upstream
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
   background-image: url('hand-painted-watercolor-pastel-sky-background_23-2148902771.avif');
+=======
+
+  background-image: url('path/to/your/background-image.jpg');
+>>>>>>> Stashed changes
   background-size: cover;
   background-position: center;
   position: relative;
+  box-shadow: #666;
+  color: white;
 
 }
 
@@ -1063,3 +1070,40 @@ cite {
   color: #666;
 }
 
+.image-about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* Flex items */
+.item {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 300px; /* Set a fixed height for all items */
+  border-radius: 8px;
+  position: relative; /* To position the description */
+
+}
+
+/* Image inside the item */
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 8px;
+}
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+  margin: 0;
+}
