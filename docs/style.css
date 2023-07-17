@@ -275,10 +275,16 @@ input[type=text][name=restaurantName] {
   animation: scaleIn 0.5s ease-in-out;
 }
 #about {
-  /*background-image: url("vintage-old-rustic-cutlery-dark.jpg");*/
+  background-image: url("vintage-old-rustic-cutlery-dark.jpg");
   /*background-size: 70%;*/
 
 }
+
+.flex-container2 {
+  display: flex;
+  justify-content: center;
+}
+
 
 .flex-container {
   /* background-image: url("vintage-old-rustic-cutlery-dark.jpg"); */
@@ -294,6 +300,17 @@ input[type=text][name=restaurantName] {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.picture-container {
+  margin: 0 10px;
+}
+
+.picture-container img {
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
 
 /* .about-heading {
   color: white;
@@ -302,7 +319,7 @@ input[type=text][name=restaurantName] {
 } */
 
 .about-content {
-  background-color:#41414175
+  background-color:#41414175;
 }
 
 input[type=text][name=usernamereg] {
@@ -1007,12 +1024,13 @@ margin-right: 20px;
 .quote2-container {
   max-width: 1000px;
   margin: 0 auto;
+  margin-top:-20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
-  background-image: url('path/to/your/background-image.jpg');
+  background-image: url('hand-painted-watercolor-pastel-sky-background_23-2148902771.avif');
   background-size: cover;
   background-position: center;
   position: relative;
