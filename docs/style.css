@@ -898,10 +898,10 @@ button[type="button"]:hover {
   transform: scale(1.5);
 }
 .topcenter{
-margin-top:-20px;
+margin-top:-25px;
 text-align: center;
 }
 .bottomcenter{
-  margin-bottom:-20px;
+  margin-bottom:-25px;
   text-align: center;
 }
