@@ -897,3 +897,11 @@ button[type="button"]:hover {
 .creator-pictures .circle:nth-child(4) img:hover {
   transform: scale(1.5);
 }
+.topcenter{
+margin-top:-20px;
+text-align: center;
+}
+.bottomcenter{
+  margin-bottom:-20px;
+  text-align: center;
+}
