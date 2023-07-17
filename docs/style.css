@@ -281,7 +281,7 @@ input[type=text][name=restaurantName] {
 }
 
 .flex-container {
-  background-image: url("vintage-old-rustic-cutlery-dark.jpg");
+  /* background-image: url("vintage-old-rustic-cutlery-dark.jpg"); */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -999,3 +999,49 @@ margin-right: 20px;
   margin-top: 10px;
   font-size: 16px;
 }
+
+
+/* styles.css */
+
+/* Quote container */
+.quote2-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  background-image: url('path/to/your/background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+
+/* Overlay to enhance readability of the quote */
+.quote-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+}
+
+/* Quote text */
+blockquote {
+  font-size: 50px;
+  text-align: center;
+
+}
+
+/* Quote source */
+cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  text-align: right;
+  color: #666;
+}
+
