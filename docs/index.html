@@ -224,13 +224,13 @@
     }
 
     if (isValid) {
-      showThankYouMessage();
+      showThankYouPage();
     }
 
     return false;
   }
 
-  function showThankYouMessage() {
+  function showThankYouPage() {
     document.getElementById("feedbackForm").classList.add("hidden");
     document.getElementById("thankYouMessage").classList.remove("hidden");
   }
@@ -252,7 +252,9 @@
 <h3 class="center">Support our mission by making a donation:</h3>
  <div class="row">
   <div class="col-75">
-    <div class="container">
+    <div class="container" id="donationContainer">
+      <form id="donationForm" action="/donate" method="POST">
+
       <form action="/action_page.php">
 
         <div class="row">
@@ -313,13 +315,10 @@
   </div>
 </div>
    
-<div class="row">
+<div class="row" id="donationContainer">
   <div class="col-75">
     <div class="container">
       <form action="/action_page.php">
-
-        <!-- Existing code for billing address -->
-
         <div class="col-50">
           <h3>Donation Amount</h3>
           <label for="donation">Choose an amount:</label>
@@ -328,9 +327,6 @@
           <input type="number" id="customDonation" name="customDonation" min="0" step="1" value="0" oninput="updateSlider()">
           <p>Donation: $<span id="donationValue">0</span></p>
         </div>
-
-        <!-- Existing code for payment -->
-
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
@@ -340,9 +336,15 @@
   </div>
 
   <div class="col-25">
-    <div class="container">
+    <div class="container" id="donationContainer">
       <p>Total <span class="price" style="color:black"><b>$<span id="totalValue">0</span></b></span></p>
     </div>
+  </div>
+</div>
+<div class="container hidden" id="thankYouContainer">
+  <div class="container">
+    <h3>Thank You!</h3>
+    <p>Your donation is hugely appreciated and contributes to our goal of helping the world!</p>
   </div>
 </div>
 </section>
@@ -371,6 +373,41 @@
     donationValue.innerHTML = customDonation.value;
     totalValue.innerHTML = customDonation.value;
   }
+  document.getElementById("donationForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  var addressInputs = document.querySelectorAll("#donationForm input[type=text]");
+  var creditCardInputs = document.querySelectorAll("#donationForm input[type=password]");
+  var isValid = true;
+
+  // Validate address inputs
+  addressInputs.forEach(function (input) {
+    if (input.value.trim() === "") {
+      input.classList.add("invalid");
+      isValid = false;
+    } else {
+      input.classList.remove("invalid");
+    }
+  });
+
+  // Validate credit card inputs
+  creditCardInputs.forEach(function (input) {
+    if (input.value.trim() === "") {
+      input.classList.add("invalid");
+      isValid = false;
+    } else {
+      input.classList.remove("invalid");
+    }
+  });
+
+  if (isValid) {
+    showThankYouMessage();
+  }
+});
+
+function showThankYouMessage() {
+  document.getElementById("thankYouContainer").classList.remove("hidden")
+}
 </script>
 
     <section id="login" class="tab-content">
