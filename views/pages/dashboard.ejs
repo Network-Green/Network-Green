@@ -19,19 +19,17 @@
     </header>
     <nav>
         <ul>
-            <li><a href="../../main.html#home" class="active">Home</a></li>
-            <li><a href="../../main.html#about">About</a></li>
-            <li><a href="../../main.html#restaurants">Restaurants</a></li>
-            <li><a href="../../main.html#contact">Contact</a></li>
-            <li><a href="../../main.html#donate">Donate</a></li>
-            <li><a href="#logout">Log Out</a></li>
+            <li><a href="../../docs/index.html">Home</a></li>
+            <li><a href="../../docs/index.html">Log Out</a></li>
             </ul>
     </nav>
     <main>
-        <p class="dashbord welcome center">Hello <%= data.restName %>!</p>
-        <p class="welcome center intro">These are your current requests:</p>
+        <h2 class="welcome center">Hello <%= data.restName %>!</h2>
         <div class="container">
-        <p>filler text</p>
+          <p class="welcome center intro">These are your current requests:</p>
+          <div class="container2">
+            <ul id="getRequests"></ul>
+          </div>
         </div>
 
     </main>
