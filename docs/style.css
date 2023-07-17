@@ -244,6 +244,8 @@ footer {
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
+  font-size: 18px;
+  margin-bottom: 20px;
   animation: scaleIn 0.5s ease-in-out;
 }
 
@@ -273,19 +275,21 @@ input[type=text][name=restaurantName] {
   animation: scaleIn 0.5s ease-in-out;
 }
 #about {
-  background-image: url("vintage-old-rustic-cutlery-dark.jpg");
-  background-size: contain;
+  /*background-image: url("vintage-old-rustic-cutlery-dark.jpg");*/
+  /*background-size: 70%;*/
 
 }
 
 .flex-container {
+  background-image: url("vintage-old-rustic-cutlery-dark.jpg");
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   max-width: 1000px;
+  max-height: auto;
   margin: 0 auto;
   padding: 50px;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -295,13 +299,11 @@ input[type=text][name=restaurantName] {
   color: white;
   font-size: 36px;
   margin-bottom: 30px;
-}
+} */
 
 .about-content {
-  color: white;
-  font-size: 18px;
-  line-height: 1.6;
-} */
+  background-color:#41414175
+}
 
 input[type=text][name=usernamereg] {
   padding: 12px 20px;
@@ -447,6 +449,25 @@ nav ul li a:hover:after {
   background-color: #047329; /* Darker green background on hover */
 }
 
+.request-button2 {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.request-button2:hover {
+  background-color: #047329; /* Darker green background on hover */
+}
+
 .request-details {
   margin-top: 20px;
 }
@@ -495,7 +516,17 @@ h3 {
 
 ul#requestsList {
   margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-in-out;
+  list-style: none;
+  margin: 0;
+}
+
+ul#getRequests {
+  margin-top: 20px;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 4px;
@@ -762,9 +793,10 @@ label {
   font-size: 18px; /* Increase the font size */
 }
 
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   padding: 15px; /* Increase the padding */
   border: 1px solid #ccc;

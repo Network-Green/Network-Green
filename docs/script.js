@@ -44,15 +44,42 @@ document.addEventListener('DOMContentLoaded', function () {
         var listItem = document.createElement('li');
         listItem.innerHTML = `
           <strong>${request.requesterName}</strong> (${request.requesterEmail})<br>
-          Requesting food from <strong>${request.restaurantName}</strong> (${request.restaurantAddress})<br>
           Location: ${request.locationName} (${request.locationAddress})<br>
           Amount of food needed: ${request.foodAmount}<br>
-          <em>${request.timestamp}</em>
+          <em>${request.timestamp}</em><br>
         `;
+        var complete = document.createElement('button');
+        complete.textContent = 'Order Submitted!';
+        complete.className = 'request-button2';
+        listItem.appendChild(complete);
         restRequestsList.appendChild(listItem);
       }
     });
   }
+
+  demoRequestsList = document.getElementById("demoRequestsList");
+  demoRequestsList.addEventListener("click", function (event) {
+    if (event.target.classList.contains('request-button2')) {
+      var listItem = event.target.parentNode;
+      listItem.remove();
+
+      // Extract the values from the list item
+      var timestamp = listItem.querySelector('br + em').textContent;
+
+      // Find the index of the corresponding element in the array
+      var index = restDisplay.findIndex(function (request) {
+        return (
+          request.timestamp === timestamp
+        );
+      });
+
+      // Remove the element from the array if found
+      if (index !== -1) {
+        restDisplay.splice(index, 1);
+        foodRequests.splice(index, 1);
+      }
+    }
+  });
 
       
 
@@ -215,6 +242,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+
 // Function to handle form submission
 function handleSubmit(event) {
   event.preventDefault();
@@ -298,7 +327,7 @@ demoForm.addEventListener("submit", (e) => {
   } 
 }); */
 
-document.getElementById("demoLogin").addEventListener("submit", function(event) {
+/*document.getElementById("demoLogin").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form from submitting normally
 
   // Get the values of the username and password fields
@@ -311,5 +340,6 @@ document.getElementById("demoLogin").addEventListener("submit", function(event) 
   }
 
   
-});
+}); */
+
 
