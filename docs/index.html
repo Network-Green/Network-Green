@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Spectral&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="loadTab()">
+<body>
   <header>
     <a href="https://networkgreen.org/">
       <img src="image-removebg-preview (6).png" height="120" width="120" style="float:right;margin:-50px 25px">
@@ -37,39 +37,6 @@
   <script>
     function changeURL(url) {
       history.pushState(null, null, url);
-    }
-
-    function saveActiveTab(tabId) {
-      localStorage.setItem('activeTab', tabId);
-    }
-
-    function loadTab() {
-      var activeTabId = localStorage.getItem('activeTab');
-      if (activeTabId) {
-        changeTab(activeTabId);
-      }
-    }
-
-    function changeTab(tabId) {
-      var tabs = document.getElementsByClassName('tab-content');
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = 'none';
-      }
-
-      var selectedTab = document.getElementById(tabId);
-      selectedTab.style.display = 'block';
-
-      var navLinks = document.getElementsByTagName('a');
-      for (var i = 0; i < navLinks.length; i++) {
-        navLinks[i].classList.remove('active');
-      }
-
-      var selectedNavLink = document.querySelector('a[href="#' + tabId + '"]');
-      if (selectedNavLink) {
-        selectedNavLink.classList.add('active');
-      }
-
-      saveActiveTab(tabId);
     }
   </script>
   </nav>
