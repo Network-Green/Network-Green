@@ -39,21 +39,6 @@
     function changeURL(url) {
       history.pushState(null, null, url);
     }
-    function changeTab(tabId) {
-      // Remove active class from all tabs
-      var tabs = document.getElementsByClassName("tab-content");
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove("active");
-      }
-
-      // Add active class to the selected tab
-      var selectedTab = document.getElementById(tabId);
-      selectedTab.classList.add("active");
-
-      // Store the active tab in sessionStorage
-      sessionStorage.setItem('activeTab', tabId);
-    }
-
     function loadTab() {
       var activeTabId = sessionStorage.getItem('activeTab');
       var activeTab = document.getElementById(activeTabId);
