@@ -23,37 +23,32 @@
   </header>
   <nav>
     <ul>
-      <!--<li><a href="#login" onclick="changeURL('https://networkgreen.org/login')">Log In</a></li>-->
 
-      <li><a id="home" href="#home" onclick="changeTab('home')" class="active">Home</a></li>
-      <li><a id="about" href="#about" onclick="changeTab('about')">About</a></li>
-      <li><a id="restaurants" href="#restaurants" onclick="changeTab('restaurants')">Search Restaurants!</a></li>
-      <li><a id="donate" href="#donate" onclick="changeTab('donate')">Support Us!</a></li>
-      <li><a id="demo" href="#demo" onclick="changeTab('demo')">Demo</a></li>
-      <li><a id="contact" href="#contact" onclick="changeTab('contact')">Contact</a></li>
+      <li><a id="home" href="#home" onclick="changeURL('https://networkgreen.org/', 'home')" class="active">Home</a></li>
+      <li><a id="about" href="#about" onclick="changeURL('https://networkgreen.org/about', 'about')">About</a></li>
+<li><a id="restaurants" href="#restaurants" onclick="changeURL('https://networkgreen.org/restaurants', 'restaurants')">Search Restaurants!</a></li>
+<li><a id="donate" href="#donate" onclick="changeURL('https://networkgreen.org/donate', 'donate')">Support Us!</a></li>
+      <!--<li><a href="#login" onclick="changeURL('https://networkgreen.org/login')">Log In</a></li>-->
+<li><a id="demo" href="#demo" onclick="changeURL('https://networkgreen.org/demo', 'demo')">Demo</a></li>
+<li><a id="contact" href="#contact" onclick="changeURL('https://networkgreen.org/contact', 'contact')">Contact</a></li>
 
     </ul>
   </nav>
   
   <script>
+    function changeURL(url) {
+      history.pushState(null, null, url);
+    }
     function changeTab(tabId) {
       // Remove active class from all tabs
       var tabs = document.getElementsByClassName("tab-content");
       for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
+        tabs[i].classList.remove("active");
       }
 
       // Add active class to the selected tab
       var selectedTab = document.getElementById(tabId);
-      selectedTab.style.display = "block";
-
-      // Update the active class in the navigation
-      var navLinks = document.getElementsByTagName("a");
-      for (var i = 0; i < navLinks.length; i++) {
-        navLinks[i].classList.remove("active");
-      }
-      var selectedNavLink = document.getElementById(tabId);
-      selectedNavLink.classList.add("active");
+      selectedTab.classList.add("active");
 
       // Store the active tab in sessionStorage
       sessionStorage.setItem('activeTab', tabId);
@@ -63,7 +58,7 @@
       var activeTabId = sessionStorage.getItem('activeTab');
       var activeTab = document.getElementById(activeTabId);
       if (activeTab) {
-        changeTab(activeTabId);
+        activeTab.classList.add('active');
       }
     }
   </script>
