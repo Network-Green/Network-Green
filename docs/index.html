@@ -26,8 +26,8 @@
     <ul>
       <li><a href="#home" onclick="changeURL('https://networkgreen.org/')" class="active">Home</a></li>
       <li><a href="#about" onclick="changeURL('https://networkgreen.org/about')" >About</a></li>
-      <li><a href="#restaurants" onclick="changeURL('https://networkgreen.org/restaurants')">Search Restaurants!</a></li>
-      <li><a href="#donate" onclick="changeURL('https://networkgreen.org/donate')">Support Us!</a></li>
+      <li><a href="#restaurants" onclick="changeURL('https://networkgreen.org/restaurants')">Restaurants</a></li>
+      <li><a href="#donate" onclick="changeURL('https://networkgreen.org/donate')">Donate</a></li>
       <!--<li><a href="#login" onclick="changeURL('https://networkgreen.org/login')">Log In</a></li>-->
       <li><a href="#demo" onclick="changeURL('https://networkgreen.org/demo')">Demo</a></li>
       <li><a href="#contact" onclick="changeURL('https://networkgreen.org/contact')">Contact</a></li>
@@ -66,7 +66,7 @@
       <br>
       <div class="button-container">
         <div class="button-wrapper">
-          <h3 class="button-header">Are you Requesting Food?</h3>
+          <h3 class="button-header">Are you a Food Shelter?</h3>
           <a href="restaurants.html" class="button-left">
             <button class="big-button">Explore Restaurants</button>
           </a>
@@ -230,7 +230,7 @@
         <p class="error-message" id="message-error"></p>
 
         <button type="submit">Submit</button>
-        <button type="button" onclick="hideForm()">Skip</button>
+        <button type="button" onclick="hideForm()">Hide</button>
       </form>
     </div>
     
@@ -295,7 +295,7 @@
 
    <section id="donate" class="tab-content">
   <h2>Donate</h2>
-<h3 class="center">Support our mission by making a donation:</h3>
+<h3 class="center">Support our mission by making a monetary donation:</h3>
  <div class="row">
   <div class="col-75">
     <div class="container" id="donationContainer">
@@ -495,10 +495,23 @@ function showThankYouMessage() {
       
     </section>
 
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
   </main>
       <footer class="footer">
         <div class="made-by">
-          <h4>Website Creators </h4>
+          <h4>Founders </h4>
       
           <p class="white">Zaeem Alam, Parth Sangani, Saachi Agrawal, and Devin Thenuwara <br> Mentored by: Wei San Hui </p>
         </div>
