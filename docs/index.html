@@ -37,24 +37,19 @@
   <script>
     function changeURL(url) {
       history.pushState(null, null, url);
+      loadTab();
     }
 
     function saveActiveTab(tabId) {
       localStorage.setItem('activeTab', tabId);
     }
+
     function loadTab() {
-  var activeTabId = localStorage.getItem('activeTab');
-  if (activeTabId) {
-    changeTab(activeTabId);
-  } else {
-    // If no active tab is stored, default to the first tab
-    var defaultTab = document.querySelector('.tab-content');
-    if (defaultTab) {
-      var defaultTabId = defaultTab.getAttribute('id');
-      changeTab(defaultTabId);
+      var activeTabId = localStorage.getItem('activeTab');
+      if (activeTabId) {
+        changeTab(activeTabId);
+      }
     }
-  }
-}
 
     function changeTab(tabId) {
       var tabs = document.getElementsByClassName('tab-content');
@@ -76,6 +71,31 @@
       }
 
       saveActiveTab(tabId);
+    }
+
+    function fetchTabContent(url, tabId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          var tabElement = document.getElementById(tabId);
+          tabElement.innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Error fetching tab content:', error);
+        });
+    }
+  </script>
+
+  <script>
+    var tabLinks = document.querySelectorAll('nav a');
+    for (var i = 0; i < tabLinks.length; i++) {
+      tabLinks[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        var url = this.href;
+        var tabId = this.getAttribute('href').substring(1);
+        changeURL(url);
+        fetchTabContent(url, tabId);
+      });
     }
   </script>
   </nav>
