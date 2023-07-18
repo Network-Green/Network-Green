@@ -42,13 +42,19 @@
     function saveActiveTab(tabId) {
       localStorage.setItem('activeTab', tabId);
     }
-
     function loadTab() {
-      var activeTabId = localStorage.getItem('activeTab');
-      if (activeTabId) {
-        changeTab(activeTabId);
-      }
+  var activeTabId = localStorage.getItem('activeTab');
+  if (activeTabId) {
+    changeTab(activeTabId);
+  } else {
+    // If no active tab is stored, default to the first tab
+    var defaultTab = document.querySelector('.tab-content');
+    if (defaultTab) {
+      var defaultTabId = defaultTab.getAttribute('id');
+      changeTab(defaultTabId);
     }
+  }
+}
 
     function changeTab(tabId) {
       var tabs = document.getElementsByClassName('tab-content');
