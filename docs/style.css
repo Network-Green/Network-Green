@@ -957,10 +957,9 @@ text-align: center;
 
 .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
 .button-wrapper {
@@ -968,15 +967,14 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   max-width: 350px;
-  margin: 0 5px;
+  margin: 0 10px;
   text-align: center;
-  flex: 1 1 33%;
 }
 
 .big-button {
   text-decoration: none;
   background-color: #28a745;
-  padding: 20px 10px;
+  padding: 20px 40px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
   color: white;
@@ -990,42 +988,22 @@ text-align: center;
   margin-bottom: 20px;
   
 }
-
-.button-left {
-  order: 1;
-}
-
-.button-center {
-  order: 2;
-}
-
-.button-right {
-  order: 3;
-}
 .button-header {
   margin-top: -16px; 
-  font-size: 30px;
+  font-size: 25px;
 }
 .button-left:hover,
 .button-right:hover {
   background-color: #218838; /* Darker green color */
 }
 
-.button-first {
+.button-left {
   background-color: #6ed3cf;
   color: white;
 margin-right: 20px;
 }
 
-.button-second {
-  margin-left: 20px;
-
-  background-color: #7c83fd;
-  color: white;
-
-}
-.button-third
-{
+.button-right {
   margin-left: 20px;
 
   background-color: #7c83fd;
