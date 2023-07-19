@@ -973,9 +973,9 @@ text-align: center;
 
 .big-button {
   text-decoration: none;
-  background-color: #28a745;
   padding: 20px 40px;
   border-radius: 8px;
+  background-color: #28a745;
   transition: background-color 0.3s ease;
   color: white;
   font-size: 40px;
@@ -992,24 +992,24 @@ text-align: center;
   margin-top: -16px; 
   font-size: 25px;
 }
-.button-left:hover,
-.button-right:hover {
+.button-first:hover,
+.button-second:hover,
+.button-third:hover {
   background-color: #218838; /* Darker green color */
 }
 
-.button-left {
-  background-color: #6ed3cf;
+.button-first {
+background-color: #eaff7b;
   color: white;
-margin-right: 20px;
 }
 
-.button-right {
-  margin-left: 20px;
+.button-second {
 
-  background-color: #7c83fd;
+  background-color: #63d7d3;
   color: white;
 
 }
+.button-third{background-color: #7c83fd	;}
 
 .button-blurb {
   text-align: center;
