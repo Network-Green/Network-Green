@@ -27,7 +27,7 @@
       <li><a href="#home" onclick="changeURL('https://networkgreen.org/')" class="active">Home</a></li>
       <li><a href="#about" onclick="changeURL('https://networkgreen.org/about')" >About</a></li>
       <li><a href="#restaurants" onclick="changeURL('https://networkgreen.org/restaurants')">Restaurants</a></li>
-      <li><a href="#donate" onclick="changeURL('https://networkgreen.org/donate')">Donate</a></li>
+      <li><a href="#donate" onclick="changeURL('https://networkgreen.org/donate')">Support Us!</u></a></li>
       <!--<li><a href="#login" onclick="changeURL('https://networkgreen.org/login')">Log In</a></li>-->
       <li><a href="#demo" onclick="changeURL('https://networkgreen.org/demo')">Demo</a></li>
       <li><a href="#contact" onclick="changeURL('https://networkgreen.org/contact')">Contact</a></li>
@@ -329,6 +329,39 @@
 
     </section>
   
+    <section id="demo" class="tab-content">
+      <h2 class="welcome center">Hello Roaring Fork!</h2>
+        <div class="container">
+          <p class="welcome center intro">These are your current requests:</p>
+          <div class="container2" id="demoRequestsList">
+            <ul id="getRequests"></ul>
+          </div>
+
+          <!--<form id="demoLogin" name="demoLogin" method="POST" action="dashboard.html">
+            <input type="text" name="username" placeholder="Username" id="demoUser" minlength="4" max length="15" pattern="[a-zA-Z0-9]+">
+            <br>
+            <input type="password" id="demoPass" placeholder="Password" name="demoPass" minlength="6" max length="15" required >
+            <br>
+            <button type="submit" class="loginbtn">Login</button>
+            <br>
+          </form>-->
+        </div>
+      
+    </section>
+
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
 
    <section id="donate" class="tab-content">
   <h2>Donate</h2>
@@ -511,39 +544,6 @@ function showThankYouMessage() {
         <p class="pwd center">New to Network Green? <a href="register.html">Join Here</a></p>
       </div>
     </section>
-
-    <section id="demo" class="tab-content">
-      <h2 class="welcome center">Hello Roaring Fork!</h2>
-        <div class="container">
-          <p class="welcome center intro">These are your current requests:</p>
-          <div class="container2" id="demoRequestsList">
-            <ul id="getRequests"></ul>
-          </div>
-
-          <!--<form id="demoLogin" name="demoLogin" method="POST" action="dashboard.html">
-            <input type="text" name="username" placeholder="Username" id="demoUser" minlength="4" max length="15" pattern="[a-zA-Z0-9]+">
-            <br>
-            <input type="password" id="demoPass" placeholder="Password" name="demoPass" minlength="6" max length="15" required >
-            <br>
-            <button type="submit" class="loginbtn">Login</button>
-            <br>
-          </form>-->
-        </div>
-      
-    </section>
-
-    <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
-    </script>
 
   </main>
       <footer class="footer">
