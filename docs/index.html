@@ -67,16 +67,11 @@
       <div class="button-container">
         <div class="button-wrapper">
           <h3 class="button-header">Are you a Food Shelter?</h3>
-          <a onclick="scrollToSection('restaurants')" class="button-left">
+          <a href="#restaurants" onclick="document.querySelector('li:nth-child(3) a').click()">
 
             <button class="big-button">Explore Restaurants</button>
           </a>
-          <script>
-            function scrollToSection(sectionId) {
-              var section = document.getElementById(sectionId);
-              section.scrollIntoView({ behavior: 'smooth' });
-            }
-            </script>
+
           <p class="button-blurb">Discover local restaurants and request food donations.</p>
         </div>
         <div class="button-wrapper">
