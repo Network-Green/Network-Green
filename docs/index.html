@@ -67,7 +67,7 @@
       <div class="button-container">
         <div class="button-wrapper">
           <h3 class="button-header">Are you a Food Shelter?</h3>
-          <a href="#restaurants" class="button-left">
+          <a href="#restaurants" onclick="scrollToSection('restaurants')" class="button-left">
 
             <button class="big-button">Explore Restaurants</button>
           </a>
@@ -99,7 +99,13 @@
         <h3>“I have the audacity to believe that peoples everywhere can have <span style="color:white; text-shadow: 0.5px 0.5px 0px black;">three meals a day</span> for their bodies, education and culture of their minds, and dignity, equality, and freedom for their spirits."</h3>
         <h3 class="center"><span style="font-weight:700;">- Martin Luther King</span></h3>
       </div>
+<script>
+    function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
 
+</script>
     </section>
     <section id="about" class="tab-content">
       <h2 class="about-heading">About Network Green</h2>
