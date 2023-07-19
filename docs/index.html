@@ -24,24 +24,37 @@
 
   <nav>
     <ul>
-      <a href="#home" onclick="changeURL('https://networkgreen.org/', event); nativeGoToTab('home')" class="active">Home</a>
-      <a href="#about" onclick="changeURL('https://networkgreen.org/about', event); nativeGoToTab('about')">About</a>
-      <a href="#restaurants" onclick="changeURL('https://networkgreen.org/restaurants', event); nativeGoToTab('restaurants')">Restaurants</a>
-      <a href="#donate" onclick="changeURL('https://networkgreen.org/donate', event); nativeGoToTab('donate')">Donate</a>
-      <a href="#demo" onclick="changeURL('https://networkgreen.org/demo', event); nativeGoToTab('demo')">Demo</a>
-      <a href="#contact" onclick="changeURL('https://networkgreen.org/contact', event); nativeGoToTab('contact')">Contact</a>
+      <a href="#home" onclick="changeURL('https://networkgreen.org/#home', event)" class="active">Home</a>
+      <a href="#about" onclick="changeURL('https://networkgreen.org/#about', event)">About</a>
+      <a href="#restaurants" onclick="changeURL('https://networkgreen.org/#restaurants', event)">Restaurants</a>
+      <a href="#donate" onclick="changeURL('https://networkgreen.org/#donate', event)">Donate</a>
+      <a href="#demo" onclick="changeURL('https://networkgreen.org/#demo', event)">Demo</a>
+      <a href="#contact" onclick="changeURL('https://networkgreen.org/#contact', event)">Contact</a>
+      
       
       
     </ul>
   </nav>
   
   <script>
-    function changeURL(url, event) {
-      event.preventDefault();
+ function changeURL(url, event) {
+  event.preventDefault(); // Prevent the default link behavior
 
-      history.pushState(null, null, url);
-      navigateToTab(url);
+  // Update the URL without reloading the page
+  history.pushState(null, null, url);
+
+  // Update the active tab based on the URL hash
+  var hash = url.substring(url.lastIndexOf("#") + 1);
+  var tab = document.getElementById(hash);
+  if (tab) {
+    // Show the corresponding tab
+    var tabs = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active");
     }
+    tab.classList.add("active");
+  }
+}
     function navigateToTab(url) {
   var tabId = url.split('#')[1];
   var tabContent = document.getElementsByClassName('tab-content');
